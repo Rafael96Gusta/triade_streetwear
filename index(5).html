@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#11100f" />
+  <title>TRÍADE — Streetwear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="noise"></div><div class="cursor-dot"></div>
+  <header class="topbar"><a class="wordmark" href="#experiencia">TRÍADE<span>®</span></a><nav><a href="#colecao">Coleção</a><a href="#manifesto">A marca</a><a href="#contato">Contato</a></nav><div class="header-actions"><button class="text-btn" id="adminTrigger">Admin</button><button class="bag-btn" id="cartTrigger" aria-label="Abrir carrinho">Bag <b id="cartCount">0</b></button></div></header>
+
+  <main>
+<!-- EXPERIÊNCIA 3D -->
+    <section class="experience-3d" id="experiencia">
+      <div class="experience-top">
+        <span>OBJETO</span>
+        <span>TRÍADE®</span>
+      </div>
+
+      <div class="experience-stage">
+        <div
+          class="model-canvas"
+          id="modelCanvas"
+          aria-label="Busto 3D interativo. Arraste para rotacionar."
+        >
+          <div class="model-loading">CARREGANDO OBJETO</div>
+          <div class="model-fallback">
+            TRÍADE
+            <small>TRÍADE</small>
+          </div>
+          <div class="model-hint">ARRASTE PARA GIRAR · RODA PARA APROXIMAR</div>
+        </div>
+
+        <div class="experience-copy">
+          
+          <h2>VISTA<br><i>O PESO.</i></h2>
+          <p>Um objeto para explorar. O busto gira lentamente sozinho quando você não está interagindo.</p>
+          </a>
+        </div>
+
+        <div class="experience-meta">
+          <span>AUTO ROTATION / ON</span>
+          <span>DRAG ↔ ROTATE</span>
+          <span>WHEEL ↕ ZOOM</span>
+        </div>
+      </div>
+
+      <div class="experience-bottom">
+        <span>MIRASSOL, SP</span>
+        <span>DROP 2026</span>
+      </div>
+    </section>
+
+    
+<section class="marquee"><div>TRÍADE   —   MODA MASCULINA   —   ENTREGA & RETIRADA EM MIRASSOL   —   TRÍADE   —   MODA MASCULINA   —   TRÍADE   —   MODA MASCULINA   —   ENTREGA & RETIRADA EM MIRASSOL   —   TRÍADE   —   MODA MASCULINA   —   ENTREGA & RETIRADA EM MIRASSOL   —   </div></section>
+    <section class="collection section" id="colecao">
+      <div class="section-head reveal"><p class="eyebrow"> peças selecionadas</p><h2>O QUE<br>CHEGOU.</h2><p>Essenciais de rua, construídos para rodar a cidade.</p></div>
+      <div class="shop-controls reveal"><label class="search"><span>⌕</span><input id="searchInput" placeholder="Buscar peça" /></label><div class="filter-row" id="filterRow"><button class="active" data-filter="Todos">Tudo</button><button data-filter="Camisetas">Camisetas</button><button data-filter="Moletons">Moletons</button><button data-filter="Calças">Calças</button><button data-filter="Acessórios">Acessórios</button></div></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+    <section class="manifesto" id="manifesto"><div class="manifesto-art"><span></span><p>TRI<br>Á<br>DE</p></div><div class="manifesto-copy reveal"><p class="eyebrow">quem veste</p><h2>SEM UNIFORME.<br><i>COM</i> INTENÇÃO.</h2><p>A Triade nasce para quem entende roupa como extensão da própria postura. Streetwear masculino com presença, feito para o cotidiano e para o que vem depois dele.</p><a class="link-arrow" href="https://www.instagram.com/triadeofc_/" target="_blank" rel="noreferrer">Seguir no Instagram <span>↗</span></a></div></section>
+    <section class="contact section" id="contato"><div><p class="eyebrow">encontra a gente</p><h2>DO NOSSO<br>LADO DA RUA.</h2></div><div class="contact-grid"><div><p class="label">Atendimento</p><p>Online · Seg–Dom<br>Mirassol — SP</p></div><div><p class="label">Entrega & retirada</p><p>Rua Oscar Martins, 3822<br>CEP 15133-424</p></div><div><p class="label">Fale com a Triade</p><a href="https://wa.me/5517991216774" target="_blank">Bruno ↗</a><a href="https://wa.me/5517992670008" target="_blank">Lucas ↗</a><a href="https://wa.me/?text=Olá%2C%20Vitor%21%20Vim%20pela%20Triade." target="_blank">Vitor ↗</a></div></div></section>
+  </main>
+  <footer><a class="wordmark" href="#experiencia">TRÍADE<span>®</span></a><p>FEITO PARA IR LONGE.</p><a href="https://www.instagram.com/triadeofc_/" target="_blank" rel="noreferrer">@triadeofc_ ↗</a></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer cart-drawer" id="cartDrawer"><button class="close" data-close>×</button><p class="eyebrow">Sua seleção</p><h2>SEU BAG <span id="cartCountWide">(0)</span></h2><div class="cart-items" id="cartItems"></div><div class="cart-foot"><div><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div><button class="primary" id="checkoutTrigger">Continuar para checkout <span>→</span></button></div></aside>
+  <div class="modal product-modal" id="productModal"><button class="close" data-close>×</button><div id="productModalContent"></div></div>
+  <div class="modal checkout-modal" id="checkoutModal"><button class="close" data-close>×</button><div class="checkout"><p class="eyebrow">Checkout demo</p><h2>FINALIZAR<br>PEDIDO.</h2><form id="checkoutForm"><label>Nome<input required placeholder="Seu nome" /></label><label>WhatsApp<input required placeholder="(17) 99999-9999" /></label><label>Como prefere receber?<select><option>Entrega em Mirassol</option><option>Retirada na loja</option></select></label><fieldset><legend>Pagamento</legend><label class="radio"><input type="radio" name="payment" value="Pix" checked /> Pix</label><label class="radio"><input type="radio" name="payment" value="Pagar no local/entrega" /> Pagar no local/entrega</label></fieldset><button class="primary" type="submit">Confirmar pedido <span>→</span></button></form></div></div>
+  <div class="modal admin-modal" id="adminModal"><button class="close" data-close>×</button><div id="adminContent"></div></div>
+  <div class="toast" id="toast"></div>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js"}}</script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
